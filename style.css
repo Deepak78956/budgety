@@ -1,0 +1,276 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+body {
+  font-family: Open Sans;
+  color: #555;
+  font: 400;
+  font-size: 16px;
+  height: 100vh;
+  position: relative;
+}
+
+.red {
+  color: #FF5049 !important;
+}
+
+.red-focus:focus {
+  border: 2px solid #FF5049 !important;
+}
+
+.upper {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+    url(markus-spiske-5gGcn2PRrtc-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 40vh;
+  position: relative;
+}
+
+.budget {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  width: 350px;
+}
+
+.availableBudget {
+  font-size: 110%;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.budget_value {
+  font-weight: 100;
+  font-size: 290%;
+  text-align: center;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+}
+
+.right {
+  float: right;
+}
+
+.budgetIncome,
+.budgetExpenses {
+  padding: 12px;
+  text-transform: uppercase;
+}
+
+.budgetIncome {
+  background-color: #28b9b5;
+  margin-bottom: 10px;
+}
+
+.budgetExpenses {
+  background-color: #ff5049;
+}
+
+.incomeText,
+.expenseText {
+  float: left;
+  font-size: 13px;
+  color: #555;
+  margin-top: 2px;
+}
+
+.budget_income_value,
+.budget_expense_value {
+  float: left;
+  letter-spacing: 1px;
+}
+
+.budget_income_percentage,
+.budget_expense_percentage {
+  float: left;
+  width: 34px;
+  font-size: 11px;
+  padding: 3px 0;
+  margin-left: 10px;
+}
+
+.budget_expense_percentage {
+  background-color: rgba(255, 255, 255, 0.2);
+  text-align: center;
+  border-radius: 3px;
+}
+
+/*------------lower part------------*/
+
+.inputs {
+  text-align: center;
+  background-color: #f7f7f7;
+  box-shadow: 0px 1px 2px rgb(231, 231, 231);
+  padding: 14px;
+}
+
+.dropDown {
+  height: 44px;
+  width: 55px;
+  font-size: 18px;
+  font-weight: 300;
+  background-color: #fff;
+  border: 1px solid #e7e7e7;
+  margin-right: 10px;
+  color: inherit;
+}
+
+
+.textBox,
+.textBoxValue {
+  height: 44px;
+  border: 1px solid #e7e7e7;
+  padding: 12px;
+  font-size: 90%;
+  color: inherit;
+  font-family: inherit;
+  margin-right: 10px;
+}
+
+.textBox {
+  width: 400px;
+}
+
+.textBoxValue {
+  width: 100px;
+}
+
+.add_btn {
+  color: #28b9b5;
+  height: 44px;
+  width: 44px;
+  background: none;
+  border: none;
+  font-size: 35px;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-left: 10px;
+  line-height: 1.1;
+}
+
+.add_btn:active {
+  transform: translateY(2px);
+}
+
+.add_btn:focus {
+  outline: none;
+}
+
+/*--------lists-----------*/
+.container {
+  width: 1000px;
+  margin: 60px auto;
+}
+
+.income_title,
+.expense_title {
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+.expense_title {
+  color: #ff5049;
+}
+
+.income_title {
+  color: #28b9b5;
+}
+
+.income {
+  float: left;
+  width: 475px;
+  margin-right: 50px;
+}
+
+.expenses {
+  float: left;
+  width: 475px;
+}
+
+.right div {
+  float: left;
+  transition: transform 0.3s;
+}
+
+.item {
+  padding: 13px;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.item_description {
+  float: left;
+}
+
+.income .item_value,
+.income i {
+  color: #28b9b5;
+}
+
+.expenses .item_value,
+.expenses i {
+  color: #ff5049;
+}
+
+.item__delete--btn {
+  font-size: 22px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+  display: none;
+}
+
+.item_percentage {
+  background-color: #ffd7d7;
+  color: #ff5049;
+  padding: 3px;
+  width: 32px;
+  font-size: 12px;
+  border-radius: 3px;
+  margin-left: 20px;
+}
+
+.item__delete--btn:focus {
+  outline: none;
+}
+
+.item__delete--btn:active {
+  transform: translateY(2px);
+}
+
+.item:hover .item__delete--btn {
+  display: block;
+}
+
+.item:hover .item_value {
+  transform: translateX(-20px);
+}
+
+.item:hover .item_percentage {
+  transform: translateX(-20px);
+}
+
+.item:first-child {
+  border-top: 1px solid #e7e7e7;
+}
+
+.item:nth-child(even) {
+  background-color: #e7e7e7;
+}
